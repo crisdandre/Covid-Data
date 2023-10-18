@@ -81,7 +81,7 @@ From [Project 2 - Covid Data]..[CovidData]
 Where continent IS NOT NULL and location <> 'European Union'
 
 
---Looking at worldwide Vaccination vs Population over time, and in Spain
+-- Looking at worldwide Vaccination vs Population over time, and in Spain
 	
 Select continent, location, date, population, new_vaccinations, 
        SUM(new_vaccinations) OVER (PARTITION BY location order by location, date) as RollingPeopleVaccinated
